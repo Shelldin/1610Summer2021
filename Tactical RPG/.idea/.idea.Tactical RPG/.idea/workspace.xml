@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +35,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/TileMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StatsSO.cs" />
       </list>
     </option>
   </component>
@@ -79,6 +81,7 @@
       <updated>1621573694422</updated>
       <workItem from="1621573803975" duration="1051000" />
       <workItem from="1622604470566" duration="608000" />
+      <workItem from="1622780472015" duration="1814000" />
     </task>
     <servers />
   </component>
