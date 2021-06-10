@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public enum BattleState {START, PLAYERTURN, ENEMYTURN, WON, LOST}
 public class BattleStateSystem : MonoBehaviour
 {
     public BattleState state;
+    
+    public List<GameObject> players = new List<GameObject>();
 
     public GameObject player;
     public TileMovement playerMovement;
@@ -14,6 +17,12 @@ public class BattleStateSystem : MonoBehaviour
     public float seconds = 2f;
 
     private WaitForSeconds wfs;
+
+
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
