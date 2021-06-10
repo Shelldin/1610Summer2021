@@ -514,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787790796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079942501}
   - component: {fileID: 1079942502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DarksolSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,6 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  playerArray: []
   player: {fileID: 1323701303}
   playerMovement: {fileID: 0}
   seconds: 2
@@ -806,7 +807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323701305}
   - component: {fileID: 1323701304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Darksol
   m_TagString: Untagged
   m_Icon: {fileID: 0}

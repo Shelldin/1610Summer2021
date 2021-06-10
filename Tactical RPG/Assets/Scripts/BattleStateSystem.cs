@@ -2,14 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public enum BattleState {START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
 public class BattleStateSystem : MonoBehaviour
 {
     public BattleState state;
-    
-    public List<GameObject> players = new List<GameObject>();
+
+    public Object[] playerArray;
 
     public GameObject player;
     public TileMovement playerMovement;
@@ -18,10 +19,12 @@ public class BattleStateSystem : MonoBehaviour
 
     private WaitForSeconds wfs;
 
+    
+
 
     private void Awake()
     {
-        
+        playerArray = Resources.FindObjectsOfTypeAll(typeof(StatsSO));
     }
 
     void Start()
