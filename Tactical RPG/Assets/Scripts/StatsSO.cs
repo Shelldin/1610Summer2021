@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class StatsSO : ScriptableObject
 {
+
+    public GameObject characterObj;
     public int lvl,
         hp,
         mp,

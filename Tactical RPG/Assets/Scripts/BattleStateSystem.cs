@@ -10,7 +10,9 @@ public class BattleStateSystem : MonoBehaviour
 {
     public BattleState state;
 
-    public Object[] playerArray;
+    private Object[] statsSOArray;
+    public StatsSO[] characterStatsArray;
+    
 
     public GameObject player;
     public TileMovement playerMovement;
@@ -24,11 +26,21 @@ public class BattleStateSystem : MonoBehaviour
 
     private void Awake()
     {
-        playerArray = Resources.FindObjectsOfTypeAll(typeof(StatsSO));
+        //From Unity Forums https://forum.unity.com/threads/how-to-properly-create-an-array-of-all-scriptableobjects-in-a-folder.794109/
+        statsSOArray = Resources.FindObjectsOfTypeAll(typeof(StatsSO));
+        characterStatsArray = new StatsSO[statsSOArray.Length];
+        statsSOArray.CopyTo(characterStatsArray, 0);
+        
+        
+        for (int i = 0; i < characterStatsArray.Length; i++)
+        {
+            Instantiate(characterStatsArray[i].characterObj);
+        }
     }
 
     void Start()
     {
+        
         wfs = new WaitForSeconds(seconds);
         playerMovement = player.GetComponent(typeof(TileMovement)) as TileMovement;
         state = BattleState.START;
