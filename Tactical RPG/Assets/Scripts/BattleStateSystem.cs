@@ -12,10 +12,11 @@ public class BattleStateSystem : MonoBehaviour
 
     private Object[] statsSOArray;
     public StatsSO[] characterStatsArray;
-    
 
-    public GameObject player;
-    public TileMovement playerMovement;
+    public TileMovement[] characterMovement;
+
+    //public GameObject player;
+    //public TileMovement playerMovement;
 
     public float seconds = 2f;
 
@@ -36,13 +37,22 @@ public class BattleStateSystem : MonoBehaviour
         {
             Instantiate(characterStatsArray[i].characterObj);
         }
+        
+        characterMovement = new TileMovement[characterStatsArray.Length];
+        
     }
 
     void Start()
     {
         
         wfs = new WaitForSeconds(seconds);
-        playerMovement = player.GetComponent(typeof(TileMovement)) as TileMovement;
+        //playerMovement = player.GetComponent(typeof(TileMovement)) as TileMovement;
+
+        for (int i = 0; i < characterStatsArray.Length; i++)
+        {
+          characterMovement[i] = characterStatsArray[i].characterObj.GetComponent(typeof(TileMovement)) as TileMovement;
+        }
+        
         state = BattleState.START;
         StartCoroutine(SetupBattle());
     }
@@ -56,7 +66,7 @@ public class BattleStateSystem : MonoBehaviour
 
     private void PlayerTurn()
     {
-        playerMovement.enabled = true;
+        characterMovement[0].enabled = true;
     }
 
     public void OnEndTurnButton()
@@ -69,7 +79,7 @@ public class BattleStateSystem : MonoBehaviour
 
      IEnumerator EndPlayerTurn()
     {
-        playerMovement.enabled = false;
+        characterMovement[0].enabled = false;
         state = BattleState.ENEMYTURN;
         yield return wfs;
         Debug.Log("Player's turn has ended");

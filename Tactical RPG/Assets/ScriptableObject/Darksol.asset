@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cbedeede422e241b9974503461713f, type: 3}
   m_Name: Darksol
   m_EditorClassIdentifier: 
+  characterObj: {fileID: 2539573325773887612, guid: 869343e4daf194b488c1de822560c9c5, type: 3}
   lvl: 50
   hp: 100
   mp: 200
