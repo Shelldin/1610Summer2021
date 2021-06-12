@@ -23,27 +23,10 @@ public class BattleStateSystem : MonoBehaviour
 
     private WaitForSeconds wfs;
 
-    //private AgilityComparer agiComparer;
     
     
-    //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer
-    public class AgilityComparer : IComparer
-    {
-        public int Compare(object x, object y)
-        {
-            StatsSO s1 = (StatsSO) x;
-            StatsSO s2 = (StatsSO) y;
-
-            if (s1.agility < s2.agility)
-                return 1;
-
-            if (s1.agility > s2.agility)
-                return -1;
-
-            else
-                return 0;
-        }
-    }
+    
+    
     
 
 
@@ -111,5 +94,24 @@ public class BattleStateSystem : MonoBehaviour
         yield return wfs;
         Debug.Log("Player's turn has ended");
     }
+     
+     //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer
+     public class AgilityComparer : IComparer
+     {
+         public int Compare(object x, object y)
+         {
+             StatsSO s1 = (StatsSO) x;
+             StatsSO s2 = (StatsSO) y;
+
+             if (s1.agility < s2.agility)
+                 return 1;
+
+             if (s1.agility > s2.agility)
+                 return -1;
+
+             else
+                 return 0;
+         }
+     }
 
 }
