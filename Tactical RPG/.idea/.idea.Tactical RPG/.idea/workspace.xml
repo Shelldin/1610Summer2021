@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="" />
+    <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatsSO.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +37,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/TileMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatsSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AgilityComparer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" />
       </list>
     </option>
@@ -83,7 +88,7 @@
       <workItem from="1623128688081" duration="2381000" />
       <workItem from="1623299559987" duration="6524000" />
       <workItem from="1623405276137" duration="4945000" />
-      <workItem from="1623489028536" duration="334000" />
+      <workItem from="1623489028536" duration="6634000" />
     </task>
     <servers />
   </component>

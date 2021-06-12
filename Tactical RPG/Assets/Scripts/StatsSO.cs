@@ -15,5 +15,7 @@ public class StatsSO : ScriptableObject
         agility,
         move;
 
+    public bool hasHadTurn = false;
+
 
 }
