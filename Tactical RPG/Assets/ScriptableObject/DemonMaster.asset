@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cbedeede422e241b9974503461713f, type: 3}
+  m_Name: DemonMaster
+  m_EditorClassIdentifier: 
+  characterObj: {fileID: 4337779064199690599, guid: f090532582107ce42b753f07432ed4fe, type: 3}
+  lvl: 35
+  hp: 55
+  mp: 100
+  exp: 5000
+  attack: 30
+  defense: 20
+  agility: 25
+  move: 5
