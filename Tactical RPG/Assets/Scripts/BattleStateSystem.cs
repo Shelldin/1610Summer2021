@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -17,7 +16,7 @@ public class BattleStateSystem : MonoBehaviour
     public TileMovement[] characterMovement;
 
     public GameObject activeUnit;
-    //public TileMovement playerMovement;
+    //public TileMovement activeMovement;
 
     public float seconds = 2f;
 
@@ -78,12 +77,39 @@ public class BattleStateSystem : MonoBehaviour
 
     private void TurnTransition()
     {
-        activeUnit = GameObject.Find(characterStatsArray[1].characterObj.name+"(Clone)");
+        for (int i = 0; i < characterStatsArray.Length; i++)
+        {
+            if (characterStatsArray[i].hasHadTurn == false) 
+            {
+                activeUnit = GameObject.Find(characterStatsArray[i].characterObj.name+"(Clone)");
+                break;
+            }
+        }
+        
+        if (characterStatsArray[characterStatsArray.Length-1].hasHadTurn)
+        {
+            for (int i = 0; i < characterStatsArray.Length; i++)
+            {
+                characterStatsArray[i].hasHadTurn = false;
+            }
+            TurnTransition();
+        }
+
+        if (activeUnit.CompareTag("Player"))
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
+        
+        else if (activeUnit.CompareTag("Enemy"))
+        {
+            state = BattleState.ENEMYTURN;
+        }
     }
 
     private void PlayerTurn()
     {
-        characterMovement[0].enabled = true;
+        activeUnit.GetComponent<TileMovement>().enabled = true;
     }
 
     public void OnEndTurnButton()
@@ -96,14 +122,24 @@ public class BattleStateSystem : MonoBehaviour
 
      IEnumerator EndPlayerTurn()
     {
-        characterMovement[0].enabled = false;
-        state = BattleState.ENEMYTURN;
+        activeUnit.GetComponent<TileMovement>().enabled = false;
+        state = BattleState.TURNTRANSITION;
         yield return wfs;
-        Debug.Log("Player's turn has ended");
+
+        for (int i = 0; i < characterStatsArray.Length; i++)
+        {
+            if (characterStatsArray[i].hasHadTurn == false)
+            {
+                characterStatsArray[i].hasHadTurn = true;
+                break;
+            }  
+        }
+
+        TurnTransition();
     }
      
      //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer
-     public class AgilityComparer : IComparer
+     private class AgilityComparer : IComparer
      {
          public int Compare(object x, object y)
          {

@@ -21,3 +21,4 @@ MonoBehaviour:
   defense: 20
   agility: 25
   move: 5
+  hasHadTurn: 1

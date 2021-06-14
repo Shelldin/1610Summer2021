@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2539573325773887603}
   m_Layer: 8
   m_Name: Darksol
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2539573325773887612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc52d8783a37fe145805b7110b047dbe, type: 3}
   m_Name: 
