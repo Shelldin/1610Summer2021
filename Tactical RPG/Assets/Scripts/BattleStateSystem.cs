@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public enum BattleState {START, PLAYERTURN, ENEMYTURN, WON, LOST}
+public enum BattleState {START, PLAYERTURN,TURNTRANSITION, ENEMYTURN, WON, LOST}
 
 public class BattleStateSystem : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class BattleStateSystem : MonoBehaviour
 
     public TileMovement[] characterMovement;
 
-    //public GameObject player;
+    public GameObject activeUnit;
     //public TileMovement playerMovement;
 
     public float seconds = 2f;
@@ -36,7 +36,7 @@ public class BattleStateSystem : MonoBehaviour
         //agiComparer = new AgilityComparer();
 
         //From Unity Forums https://forum.unity.com/threads/how-to-properly-create-an-array-of-all-scriptableobjects-in-a-folder.794109/
-        statsSOArray = Resources.FindObjectsOfTypeAll(typeof(StatsSO));
+        statsSOArray = Resources.LoadAll("ScriptableObject", typeof(StatsSO));
         characterStatsArray = new StatsSO[statsSOArray.Length];
         statsSOArray.CopyTo(characterStatsArray, 0);
         
@@ -71,7 +71,14 @@ public class BattleStateSystem : MonoBehaviour
         
         yield return wfs;
 
-        state = BattleState.PLAYERTURN;
+        state = BattleState.TURNTRANSITION;
+        
+        TurnTransition();
+    }
+
+    private void TurnTransition()
+    {
+        activeUnit = GameObject.Find(characterStatsArray[1].characterObj.name+"(Clone)");
     }
 
     private void PlayerTurn()
