@@ -21,16 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DarkMage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DarkMage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Darksol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Darksol.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DemonMaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DemonMaster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MasterMage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MasterMage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/DarkMage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/DarkMage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/Darksol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/Darksol.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/DemonMaster.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/DemonMaster.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/MasterMage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/MasterMage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +89,7 @@
       <workItem from="1623489028536" duration="6634000" />
       <workItem from="1623500234106" duration="223000" />
       <workItem from="1623634560380" duration="8409000" />
+      <workItem from="1624943466871" duration="1189000" />
     </task>
     <servers />
   </component>
