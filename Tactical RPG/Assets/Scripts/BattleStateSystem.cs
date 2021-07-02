@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 using Object = UnityEngine.Object;
 
 public enum BattleState {START, PLAYERTURN,TURNTRANSITION, ENEMYTURN, WON, LOST}
 public enum BattleMenuOptions {PANEL, ATTACK, MAGIC, ITEM, STAY} //from https://pavcreations.com/selecting-battle-targets-in-a-grid-based-game/
 
+
+//CONTINUE FROM STEP 3 FOR TARGETING SELECTION TUTORIAL
 
 public class BattleStateSystem : MonoBehaviour
 {
@@ -176,7 +179,17 @@ public class BattleStateSystem : MonoBehaviour
              onSelectionModeEnabled = false;
              isSelectionMode = false;
              hasClicked = true;
+
+             if (lastBattleMenuOption == BattleMenuOptions.ATTACK)
+             {
+                 Attack();
+             }
          }
+     }
+
+     private void Attack()
+     {
+         Debug.Log("Such a devastating attack!");
      }
      
      //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer

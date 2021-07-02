@@ -286,10 +286,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac568eeccdcbaa94d9fec3e0b3d3b468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  battleState: 0
+  lastBattleMenuOption: 0
+  hasClicked: 0
+  isSelectionMode: 0
+  onSelectionModeEnabled: 0
+  keyDown: 0
   characterStatsArray: []
   characterMovement: []
+  enemyList:
+  - {fileID: 0}
   activeUnit: {fileID: 0}
+  enemy: {fileID: 0}
+  lastEnemyChoice: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   seconds: 2
 --- !u!4 &221903185
 Transform:
