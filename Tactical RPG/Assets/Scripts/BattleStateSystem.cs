@@ -1,22 +1,47 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 public enum BattleState {START, PLAYERTURN,TURNTRANSITION, ENEMYTURN, WON, LOST}
+public enum BattleMenuOptions {PANEL, ATTACK, MAGIC, ITEM, STAY} //from https://pavcreations.com/selecting-battle-targets-in-a-grid-based-game/
+
 
 public class BattleStateSystem : MonoBehaviour
 {
 
-    public BattleState state;
+    public BattleState battleState;
+    public BattleMenuOptions lastBattleMenuOption;
+
+    public bool hasClicked = false,
+        isSelectionMode = false,
+        onSelectionModeEnabled = false,
+        keyDown = false;
 
     private Object[] statsSOArray;
     public StatsSO[] characterStatsArray;
 
     public TileMovement[] characterMovement;
 
+    public List<GameObject> enemyList;
+
     public GameObject activeUnit;
+
+    public GameObject enemy,
+        lastEnemyChoice;
     //public TileMovement activeMovement;
+    
+    private ContactFilter2D contactFilter = new ContactFilter2D();
+    private List<RaycastHit2D> results = new List<RaycastHit2D>();
+
+    public LayerMask enemyLayer;
+
+    public delegate void OnBattleMenuSelectionCallback();
+    public OnBattleMenuSelectionCallback onBattleMenuSelectionCallback;
+
+    public delegate void OnBattleSelectionModeConfirmCallback();
+    public OnBattleSelectionModeConfirmCallback onBattleSelectionModeConfirmCallback;
 
     public float seconds = 2f;
 
@@ -51,7 +76,13 @@ public class BattleStateSystem : MonoBehaviour
 
     void Start()
     {
-        
+        enemyList = new List<GameObject>();
+        contactFilter.SetLayerMask(enemyLayer);
+        contactFilter.useLayerMask = true;
+
+        onBattleSelectionModeConfirmCallback += ConfirmSelectionModeChoice;
+
+
         wfs = new WaitForSeconds(seconds);
         //playerMovement = player.GetComponent(typeof(TileMovement)) as TileMovement;
 
@@ -60,7 +91,7 @@ public class BattleStateSystem : MonoBehaviour
           characterMovement[i] = characterStatsArray[i].characterObj.GetComponent(typeof(TileMovement)) as TileMovement;
         }
         
-        state = BattleState.START;
+        battleState = BattleState.START;
         StartCoroutine(SetupBattle());
     }
 
@@ -70,7 +101,7 @@ public class BattleStateSystem : MonoBehaviour
         
         yield return wfs;
 
-        state = BattleState.TURNTRANSITION;
+        battleState = BattleState.TURNTRANSITION;
         
         TurnTransition();
     }
@@ -97,13 +128,13 @@ public class BattleStateSystem : MonoBehaviour
 
         if (activeUnit.CompareTag("Player"))
         {
-            state = BattleState.PLAYERTURN;
+            battleState = BattleState.PLAYERTURN;
             PlayerTurn();
         }
         
         else if (activeUnit.CompareTag("Enemy"))
         {
-            state = BattleState.ENEMYTURN;
+            battleState = BattleState.ENEMYTURN;
         }
     }
 
@@ -114,7 +145,7 @@ public class BattleStateSystem : MonoBehaviour
 
     public void OnEndTurnButton()
     {
-        if (state != BattleState.PLAYERTURN) 
+        if (battleState != BattleState.PLAYERTURN) 
             return;
 
         StartCoroutine(EndPlayerTurn());
@@ -123,7 +154,7 @@ public class BattleStateSystem : MonoBehaviour
      IEnumerator EndPlayerTurn()
     {
         activeUnit.GetComponent<TileMovement>().enabled = false;
-        state = BattleState.TURNTRANSITION;
+        battleState = BattleState.TURNTRANSITION;
         yield return wfs;
 
         for (int i = 0; i < characterStatsArray.Length; i++)
@@ -137,6 +168,16 @@ public class BattleStateSystem : MonoBehaviour
 
         TurnTransition();
     }
+
+     private void ConfirmSelectionModeChoice()
+     {
+         if (isSelectionMode)
+         {
+             onSelectionModeEnabled = false;
+             isSelectionMode = false;
+             hasClicked = true;
+         }
+     }
      
      //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer
      private class AgilityComparer : IComparer
