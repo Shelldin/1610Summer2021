@@ -6,6 +6,13 @@
     <e p="D:\1610\1610Summer2021\New Unity Project" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Challenge 1" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="FollowPlayerX.cs" t="Include" />
+            <e p="PlayerControllerX.cs" t="Include" />
+            <e p="SpinPropeller.cs" t="Include" />
+          </e>
+        </e>
         <e p="Course Library" t="Include">
           <e p="_Source_Files" t="Include">
             <e p="_LICENSE.txt" t="Include" />
