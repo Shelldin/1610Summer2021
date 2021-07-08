@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject foodPrefab;
+    
     private Vector3 leftBoundary;
     private Vector3 rightBoundary;
     
@@ -32,6 +34,11 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x > xRange)
         {
             transform.position = rightBoundary;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(foodPrefab, transform.position, foodPrefab.transform.rotation);
         }
         
     }
