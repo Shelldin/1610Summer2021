@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <workItem from="1624943466871" duration="1199000" />
       <workItem from="1625240761665" duration="3713000" />
       <workItem from="1625249806765" duration="4177000" />
-      <workItem from="1625801072913" duration="3891000" />
+      <workItem from="1625801072913" duration="6856000" />
     </task>
     <servers />
   </component>
