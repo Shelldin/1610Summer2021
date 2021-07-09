@@ -6,9 +6,9 @@ using UnityEngine.Timeline;
 using Object = UnityEngine.Object;
 
 public enum BattleState {START, PLAYERTURN,TURNTRANSITION, ENEMYTURN, WON, LOST}
-public enum BattleMenuOptions {PANEL, ATTACK, MAGIC, ITEM, STAY} //from https://pavcreations.com/selecting-battle-targets-in-a-grid-based-game/
+public enum BattleMenuOptions {PANEL, ATTACK, MAGIC, ITEM, STAY} 
 
-
+//Some sections of code from Pav Creations Tutorial https://pavcreations.com/selecting-battle-targets-in-a-grid-based-game/
 //CONTINUE FROM STEP 3 FOR TARGETING SELECTION TUTORIAL
 
 public class BattleStateSystem : MonoBehaviour
