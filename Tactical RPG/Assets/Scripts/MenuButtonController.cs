@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(RectTransform))]
 //from PavCreations Tutorial https://pavcreations.com/scrollable-menu-in-unity-with-button-or-key-controller/#script-controlling-button-behaviour
+//START FROM "CHANGING THE POSITION ON THE LIST WITH KEYS" in tutorial
 public class MenuButtonController : MonoBehaviour
 {
     public int menuIndex,
