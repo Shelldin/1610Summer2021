@@ -63,11 +63,12 @@ public class BattleStateSystem : MonoBehaviour
         //agiComparer = new AgilityComparer();
 
         //From Unity Forums https://forum.unity.com/threads/how-to-properly-create-an-array-of-all-scriptableobjects-in-a-folder.794109/
+        //finds all the scriptable objects for units that will be in a battle and places them into an array
         statsSOArray = Resources.LoadAll("ScriptableObject", typeof(StatsSO));
         characterStatsArray = new StatsSO[statsSOArray.Length];
         statsSOArray.CopyTo(characterStatsArray, 0);
         
-        
+        //instantiate the sprite and gameobject for a unit according to the unit prefab associated with the scriptableObjects
         for (int i = 0; i < characterStatsArray.Length; i++)
         {
             Instantiate(characterStatsArray[i].characterObj);
@@ -97,7 +98,8 @@ public class BattleStateSystem : MonoBehaviour
         battleState = BattleState.START;
         StartCoroutine(SetupBattle());
     }
-
+    
+    //prepares the battle by sorting the units in battle according to their agility stat
     IEnumerator SetupBattle()
     {
         Array.Sort(characterStatsArray, new AgilityComparer());
@@ -108,7 +110,8 @@ public class BattleStateSystem : MonoBehaviour
         
         TurnTransition();
     }
-
+    
+    //changes state and determine which unit is next in battle based on array order and if they've already had a turn.
     private void TurnTransition()
     {
         for (int i = 0; i < characterStatsArray.Length; i++)
@@ -140,12 +143,14 @@ public class BattleStateSystem : MonoBehaviour
             battleState = BattleState.ENEMYTURN;
         }
     }
-
+    
+    //enables the player to take actions with the active unit when the active unit is a player character.
     private void PlayerTurn()
     {
         activeUnit.GetComponent<TileMovement>().enabled = true;
     }
-
+    
+    //ends turn of current active unit
     public void OnEndTurnButton()
     {
         if (battleState != BattleState.PLAYERTURN) 
@@ -153,7 +158,8 @@ public class BattleStateSystem : MonoBehaviour
 
         StartCoroutine(EndPlayerTurn());
     }
-
+    
+    //when the player ends its turn marks the active unit as having had its turn and causes a turn transition to cycle to the next unit.
      IEnumerator EndPlayerTurn()
     {
         activeUnit.GetComponent<TileMovement>().enabled = false;

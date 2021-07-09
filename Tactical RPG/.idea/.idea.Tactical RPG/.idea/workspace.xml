@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Prototype 2 Create with Code/.idea/.idea.Prototype 2 Create with Code/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Prototype 2 Create with Code/.idea/.idea.Prototype 2 Create with Code/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prototype 2 Create with Code/Assets/Challenge 2/Challenge 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Prototype 2 Create with Code/Assets/Challenge 2/Challenge 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,17 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ToggleActive.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/TileMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StatsSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AgilityComparer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToggleActive.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" />
       </list>
     </option>
   </component>
@@ -98,6 +96,7 @@
       <workItem from="1624943466871" duration="1199000" />
       <workItem from="1625240761665" duration="3713000" />
       <workItem from="1625249806765" duration="4177000" />
+      <workItem from="1625801072913" duration="755000" />
     </task>
     <servers />
   </component>

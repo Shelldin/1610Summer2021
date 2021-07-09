@@ -10,7 +10,6 @@
           <e p="BattleStateSystem.cs" t="Include" />
           <e p="StatsSO.cs" t="Include" />
           <e p="TileMovement.cs" t="Include" />
-          <e p="ToggleActive.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
