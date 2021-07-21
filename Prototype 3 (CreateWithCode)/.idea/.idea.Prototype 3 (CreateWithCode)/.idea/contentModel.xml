@@ -6,6 +6,17 @@
     <e p="D:\1610\1610Summer2021\Prototype 3 (CreateWithCode)" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Challenge 3" t="Include">
+          <e p="_Source_Files" t="Include">
+            <e p="SpinObjectsX.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="MoveLeftX.cs" t="Include" />
+            <e p="PlayerControllerX.cs" t="Include" />
+            <e p="RepeatBackgroundX.cs" t="Include" />
+            <e p="SpawnManagerX.cs" t="Include" />
+          </e>
+        </e>
         <e p="Course Library" t="Include">
           <e p="_Source_Files" t="Include">
             <e p="_LICENSE.txt" t="Include" />
