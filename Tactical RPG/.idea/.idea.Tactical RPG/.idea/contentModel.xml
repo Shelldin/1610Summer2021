@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BattleStateSystem.cs" t="Include" />
+          <e p="MenuButton.cs" t="Include" />
           <e p="MenuButtonController.cs" t="Include" />
           <e p="StatsSO.cs" t="Include" />
           <e p="TileMovement.cs" t="Include" />

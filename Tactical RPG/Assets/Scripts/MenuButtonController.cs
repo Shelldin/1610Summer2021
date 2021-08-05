@@ -13,7 +13,7 @@ public class MenuButtonController : MonoBehaviour
     [SerializeField] private bool keyDown;
     [SerializeField] private RectTransform rectTransform;
 
-    private bool isPressedUp, isPressedDown, isPressedConfirm;
+    public bool isPressedUp, isPressedDown, isPressedConfirm;
 
     private int verticalMovement;
 
