@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPanel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/pressed.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/pressed.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ListElementPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ListElementPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +46,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AgilityComparer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToggleActive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BattleStateSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +104,8 @@
       <workItem from="1625240761665" duration="3713000" />
       <workItem from="1625249806765" duration="4177000" />
       <workItem from="1625801072913" duration="7601000" />
-      <workItem from="1628136309680" duration="2551000" />
+      <workItem from="1628136309680" duration="5668000" />
+      <workItem from="1628151281393" duration="716000" />
     </task>
     <servers />
   </component>

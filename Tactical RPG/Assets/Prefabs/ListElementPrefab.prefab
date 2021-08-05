@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6769905535423433292}
   - component: {fileID: 6104701765214542328}
   - component: {fileID: 2219381500357926604}
+  - component: {fileID: -424015802804606736}
   m_Layer: 5
   m_Name: ListElementPrefab
   m_TagString: Untagged
@@ -97,6 +98,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-424015802804606736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923946085819718976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fd9b055d3510d4692dc7c5232b1228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 0}
+  animator: {fileID: 0}
+  buttonIndex: 0
+  menuPanelToOpen: {fileID: 0}
 --- !u!1 &6171667651288326861
 GameObject:
   m_ObjectHideFlags: 0
