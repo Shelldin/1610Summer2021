@@ -47,11 +47,11 @@ public class MenuButtonController : MonoBehaviour
             verticalMovement = 0;
         }
 
-        if (verticalMovement != 0)
+        if (Input.GetAxis("Vertical") !=0 || verticalMovement != 0)
         {
             if (!keyDown)
             {
-                if (verticalMovement < 0)
+                if (Input.GetAxis("Vertical") < 0 || verticalMovement < 0)
                 {
                     if (menuIndex < maxMenuIndex)
                     {
@@ -67,7 +67,7 @@ public class MenuButtonController : MonoBehaviour
                         rectTransform.offsetMax = Vector2.zero;
                     }
                 }
-                else if (verticalMovement > 0)
+                else if (Input.GetAxis("Vertical") > 0 || verticalMovement > 0)
                 {
                     if (menuIndex > 0)
                     {
