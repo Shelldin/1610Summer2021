@@ -66,7 +66,6 @@ public class MenuButtonController : MonoBehaviour
                     {
                         menuIndex = 0;
                         rectTransform.offsetMax = Vector2.zero;
-                        Debug.Log(rectTransform.offsetMax);
                     }
                 }
                 else if (Input.GetAxis("Vertical") > 0 || verticalMovement > 0)
