@@ -18,15 +18,17 @@ public class MenuButtonController : MonoBehaviour
 
     public float yOffset = 64;
 
-    //private Vector2 rectTransOffsetVector2,
-        //alternateRectTransOffsetVector2;
+    private Vector2 rectTransOffsetVector2,
+        negativeRectTransOffsetVector2,
+        alternateRectTransOffsetVector2;
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         isPressedUp = isPressedDown = false;
-        //rectTransOffsetVector2 = new Vector2(0, yOffset);
-        //alternateRectTransOffsetVector2 = new Vector2(0, (maxMenuIndex-2) * yOffset);
+        rectTransOffsetVector2 = new Vector2(0, yOffset);
+        negativeRectTransOffsetVector2 = new Vector2(0, -yOffset);
+        alternateRectTransOffsetVector2 = new Vector2(0, (maxMenuIndex-2) * yOffset);
     }
 
     private void Update()
@@ -57,13 +59,14 @@ public class MenuButtonController : MonoBehaviour
                         menuIndex++;
                         if (menuIndex > 1 && menuIndex < maxMenuIndex)
                         {
-                            rectTransform.offsetMax -= new Vector2(0, -yOffset);
+                            rectTransform.offsetMax -= negativeRectTransOffsetVector2;
                         }
                     }
                     else
                     {
                         menuIndex = 0;
                         rectTransform.offsetMax = Vector2.zero;
+                        Debug.Log(rectTransform.offsetMax);
                     }
                 }
                 else if (Input.GetAxis("Vertical") > 0 || verticalMovement > 0)
@@ -73,13 +76,15 @@ public class MenuButtonController : MonoBehaviour
                         menuIndex--;
                         if (menuIndex < maxMenuIndex - 1 && menuIndex > 0)
                         {
-                            rectTransform.offsetMax -= new Vector2(0, yOffset);
+                            rectTransform.offsetMax -= rectTransOffsetVector2;
+                            
                         }
                     }
                     else
                     {
                         menuIndex = maxMenuIndex;
-                        rectTransform.offsetMax = new Vector2(0, (maxMenuIndex - 2) * yOffset);
+                        rectTransform.offsetMax = alternateRectTransOffsetVector2;
+                        
                     }
                 }
                 keyDown = true;

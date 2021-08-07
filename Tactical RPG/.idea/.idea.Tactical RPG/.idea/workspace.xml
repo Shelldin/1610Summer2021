@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="17934919-058a-4a36-b3cd-f82c2469c05f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tactical RPG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/pressed.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/pressed.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ListElementPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ListElementPrefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TacticalRPG.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuButtonController.cs" afterDir="false" />
     </list>
@@ -106,6 +104,7 @@
       <workItem from="1625801072913" duration="7601000" />
       <workItem from="1628136309680" duration="5668000" />
       <workItem from="1628151281393" duration="716000" />
+      <workItem from="1628291357360" duration="3231000" />
     </task>
     <servers />
   </component>
