@@ -9,10 +9,28 @@ public enum BattleState {START, PLAYERTURN,TURNTRANSITION, ENEMYTURN, WON, LOST}
 public enum BattleMenuOptions {PANEL, ATTACK, MAGIC, ITEM, STAY} 
 
 //Some sections of code from Pav Creations Tutorial https://pavcreations.com/selecting-battle-targets-in-a-grid-based-game/
-//CONTINUE FROM STEP 3 FOR TARGETING SELECTION TUTORIAL
+//CONTINUE FROM STEP 4 FOR TARGETING SELECTION TUTORIAL
 
 public class BattleStateSystem : MonoBehaviour
 {
+    #region Singleton
+
+    public static BattleStateSystem instance;
+    
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    #endregion
 
     public BattleState battleState;
     public BattleMenuOptions lastBattleMenuOption;
@@ -39,6 +57,7 @@ public class BattleStateSystem : MonoBehaviour
     private List<RaycastHit2D> results = new List<RaycastHit2D>();
 
     public LayerMask enemyLayer;
+    
 
     public delegate void OnBattleMenuSelectionCallback();
     public OnBattleMenuSelectionCallback onBattleMenuSelectionCallback;
@@ -49,15 +68,11 @@ public class BattleStateSystem : MonoBehaviour
     public float seconds = 2f;
 
     private WaitForSeconds wfs;
-
-    
-    
     
     
     
 
-
-    private void Awake()
+    void Start()
     {
         
         //agiComparer = new AgilityComparer();
@@ -76,10 +91,7 @@ public class BattleStateSystem : MonoBehaviour
         
         characterMovement = new TileMovement[characterStatsArray.Length];
         
-    }
-
-    void Start()
-    {
+        
         enemyList = new List<GameObject>();
         contactFilter.SetLayerMask(enemyLayer);
         contactFilter.useLayerMask = true;
@@ -196,6 +208,16 @@ public class BattleStateSystem : MonoBehaviour
      private void Attack()
      {
          Debug.Log("Such a devastating attack!");
+     }
+
+     public void ExecuteOption(BattleMenuOptions battleMenuOptions)
+     {
+         if (battleState != BattleState.PLAYERTURN)
+             return;
+         if (!hasClicked)
+         {
+             
+         }
      }
      
      //from https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/use-icomparable-icomparer
